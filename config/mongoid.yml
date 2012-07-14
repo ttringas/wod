@@ -1,0 +1,12 @@
+development:
+  host: localhost
+  database: solar_calculator_development
+test:
+  host: localhost
+  database: solar_calculator_test
+production:
+  host: <%= ENV['MONGOID_HOST'] %>
+  port: <%= ENV['MONGOID_PORT'] %>
+  username: <%= ENV['MONGOID_USERNAME'] %>
+  password: <%= ENV['MONGOID_PASSWORD'] %>
+  database: <%= ENV['MONGOID_DATABASE'] %>
