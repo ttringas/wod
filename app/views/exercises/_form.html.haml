@@ -1,0 +1,11 @@
+= simple_form_for @exercise do |f|
+  = f.input :name
+  = f.input :description, as: :text
+  = f.input :how_much_unit, collection: ["weight", "distance", "none"], include_blank: false
+  = f.input :how_many_unit, collection: ["reps", "time"], include_blank: false
+  %strong Required Equipment, check all that apply
+  %br
+  = f.collection_check_boxes :equipment_ids, Equipment.all, :id, :name
+  %br
+  = f.submit "Save", class: 'btn btn-primary'
+  

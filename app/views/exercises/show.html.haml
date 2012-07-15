@@ -1,0 +1,14 @@
+%h1= @exercise.name
+%p.well= @exercise.description
+%table.table-striped.table
+  %tbody
+    %tr
+      %th How Much Unit:
+      %td= @exercise.how_much_unit
+    %tr
+      %th How Many Unit:
+      %td= @exercise.how_many_unit
+
+
+= link_to 'Edit', edit_exercise_path(@exercise), class: 'btn btn-primary'
+= link_to 'Back', exercises_path, class: 'btn btn-default'

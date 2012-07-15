@@ -1,0 +1,13 @@
+%h1 New Workout
+%h3 Required Exercises
+%ul
+  - @exercises.each do |exercise|
+    %li= exercise.name
+
+= simple_form_for @workout do |f|
+  %strong Check each completed exercise as you do it!
+  %br
+  = f.collection_check_boxes :exercise_ids, @exercises, :id, :name, checked: "true"
+  = f.input :note, as: :text
+  = f.submit "Save Completed Workout", class: 'btn btn-primary'
+= link_to "Different Workout", workouts_new_path, class: 'btn btn-default'

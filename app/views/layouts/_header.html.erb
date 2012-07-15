@@ -1,0 +1,15 @@
+<header class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <%= link_to "WOD Generator", root_path, id: "logo" %>
+      <nav>
+        <ul class="nav pull-right">
+          <li><%= link_to "Exercises",      exercises_path %></li>
+          <li><%= link_to "Equipment",      equipment_index_path %></li>
+          <li><%= link_to "My Workouts",    workouts_path %></li>
+          <li><%= link_to "New Workout",    workouts_new_path %></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

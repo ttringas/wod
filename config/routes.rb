@@ -1,4 +1,13 @@
 Wod::Application.routes.draw do
+  get "pages/index"
+  get "pages/about"
+
+  resources :equipment
+  resources :exercises
+  resources :workouts
+
+  root to: "pages#index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -1,0 +1,14 @@
+%h1 
+  Workout on 
+  %small= @workout.created_at.to_formatted_s(:short)
+%table.table.table-striped
+  %tbody
+    - @exercises.each_with_index do |ex, i|
+      %tr
+        %th= "Exercise #{i + 1 }"
+        %td= ex.name
+%p
+  Notes:
+  = @workout.note
+      
+

@@ -1,0 +1,15 @@
+%h1 Completed Workouts
+%table.table.table-striped
+  %thead
+    %th Date
+    %th Exercise 1
+    %th Exercise 2
+    %th Exercise 3
+    %th Details
+  %tbody
+    - @workouts.each do |wkout|
+      %tr
+        %td= wkout.created_at
+        - wkout.exercises.each do |ex|
+          %td= ex.name
+        %td= link_to "View", workout_path(wkout)

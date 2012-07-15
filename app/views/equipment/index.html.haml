@@ -1,0 +1,11 @@
+%h1 Equipment Types
+
+%ul#equipment_list
+  - @equipments.each do |equipment|
+    %li
+      %span= equipment.name
+      %span= link_to 'Remove', equipment, confirm: 'Are you sure?', method: :delete
+
+%br
+%h3 Add a new piece of equipment
+= render 'form'
